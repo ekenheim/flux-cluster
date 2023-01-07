@@ -25,7 +25,7 @@ spec:
     ingress:
       main:
         enabled: true
-        ingressClassName: "nginx"
+        ingressClassName: nginx
         hosts:
           - host: &host "storage.${SECRET_DOMAIN}"
             paths:
