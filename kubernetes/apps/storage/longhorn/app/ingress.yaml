@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: longhorn
-  namespace: longhorn-system
+  namespace: storage
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/auth-url: "http://longhorn-oauth2-proxy.storage.svc.cluster.local/oauth2/auth"
@@ -14,7 +14,7 @@ spec:
         - &host "storage.${SECRET_DOMAIN}"
       secretName: *host
   rules:
-    - host: longhorn.ekenhome.se
+    - host: storage.ekenhome.se
       http:
         paths:
           - pathType: Prefix
