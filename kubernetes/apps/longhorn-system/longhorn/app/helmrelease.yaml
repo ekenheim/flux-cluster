@@ -1,3 +1,4 @@
+---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -22,25 +23,20 @@ spec:
     remediation:
       retries: 5
   values:
+    persistence:
+      defaultClassReplicaCount: 3
+    defaultSettings:
+      defaultReplicaCount: 3
+      createDefaultDiskLabeledNodes: true
+      storageMinimalAvailablePercentage: "10"
+      defaultLonghornStaticStorageClass: "longhorn"
     ingress:
-      main:
-        enabled: true
-        ingressClassName: nginx
-        annotations:
-          cert-manager.io/cluster-issuer: letsencrypt-staging
-          nginx.ingress.kubernetes.io/whitelist-source-range: |
-            10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
-          hajimari.io/enable: "false"
-        hosts:
-          - host: &host "longhorn.${SECRET_DOMAIN}"
-            paths:
-              - path: /
-                pathType: Prefix
-                service:
-                  name: longhorn-frontend
-                  port:
-                    number: 80
-        tls:
-          - hosts:
-              - *host
-            secretName: longhorn-tls
+      enabled: true
+      ingressClassName: "nginx"
+      tls: true
+      host: "longhorn.${SECRET_DOMAIN}"
+      tlsSecret: "longhorn-${SECRET_DOMAIN}-tls"
+      annotations:
+        cert-manager.io/cluster-issuer: "letsencrypt-staging"
+        hajimari.io/enable: "true"
+        hajimari.io/icon: "content-save-outline"
