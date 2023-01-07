@@ -38,7 +38,6 @@ spec:
                 pathType: Prefix
                 service:
                   name: longhorn-frontend
-                  port: *port-console
         tls:
           - hosts:
               - *host
