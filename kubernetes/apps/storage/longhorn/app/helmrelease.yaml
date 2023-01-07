@@ -25,7 +25,7 @@ spec:
     ingress:
       main:
         enabled: true
-        ingressClassName: "nginx"
+        ingressClassName: nginx
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt-staging
           nginx.ingress.kubernetes.io/whitelist-source-range: |
@@ -38,6 +38,9 @@ spec:
                 pathType: Prefix
                 service:
                   name: longhorn-frontend
+                  port:
+                    number: 80
         tls:
           - hosts:
               - *host
+            secretName: longhorn-tls
