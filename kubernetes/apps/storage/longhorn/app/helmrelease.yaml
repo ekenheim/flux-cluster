@@ -23,25 +23,32 @@ spec:
     remediation:
       retries: 5
   values:
+    env:
+      TZ: "${TIMEZONE}"
+    extraArgs:
+      - --enable-skip-login
+      - --disable-settings-authorizer
+      - --enable-insecure-login
+      - --token-ttl=43200
     defaultSettings:
       backupTarget: "nfs://192.168.50.50:/mnt/disks/minio-backup/k3s-longhorn/"
     ingress:
       main:
         enabled: true
-        ingressClassName: nginx
+        ClassName: nginx
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt-staging
           nginx.ingress.kubernetes.io/whitelist-source-range: |
             10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
-          hajimari.io/enable: "false"
+          hajimari.io/enable: "true"
+          hajimari.io/icon: mdi:kubernetes
         hosts:
-          - host: &host "storage.${SECRET_DOMAIN}"
-            paths:
-              - path: /
-                pathType: Prefix
+          - &host "storage.${SECRET_DOMAIN}"
         tls:
           - hosts:
               - *host
             secretName: longhorn-tls
-    podAnnotations:
-      configmap.reloader.stakater.com/reload: longhorn-settings
+    metricsScraper:
+      enabled: true
+    serviceMonitor:
+      enabled: false
