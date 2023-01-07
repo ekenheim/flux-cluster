@@ -35,7 +35,7 @@ spec:
     ingress:
       main:
         enabled: true
-        ClassName: nginx
+        ingressClassName: "nginx"
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt-staging
           nginx.ingress.kubernetes.io/whitelist-source-range: |
@@ -43,12 +43,10 @@ spec:
           hajimari.io/enable: "true"
           hajimari.io/icon: mdi:kubernetes
         hosts:
-          - &host "storage.${SECRET_DOMAIN}"
+          - host: &host "storage.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathType: Prefix
         tls:
           - hosts:
               - *host
-            secretName: longhorn-tls
-    metricsScraper:
-      enabled: true
-    serviceMonitor:
-      enabled: false
