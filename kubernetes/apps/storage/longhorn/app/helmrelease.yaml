@@ -25,11 +25,6 @@ spec:
   values:
     env:
       TZ: "${TIMEZONE}"
-    extraArgs:
-      - --enable-skip-login
-      - --disable-settings-authorizer
-      - --enable-insecure-login
-      - --token-ttl=43200
     defaultSettings:
       backupTarget: "nfs://192.168.50.50:/mnt/disks/minio-backup/k3s-longhorn/"
     ingress:
