@@ -73,6 +73,7 @@ spec:
       config:
         enabled: true
         existingClaim: sonarr-config-pvc
+        subPath: /config
       media:
         enabled: true
         type: nfs
@@ -84,4 +85,4 @@ spec:
         cpu: 10m
         memory: 250Mi
       limits:
-        memory: 2001Mi
+        memory: 2000Mi
