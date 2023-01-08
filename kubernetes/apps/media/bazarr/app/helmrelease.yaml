@@ -72,4 +72,4 @@ spec:
         cpu: 10m
         memory: 250Mi
       limits:
-        memory: 2001Mi
+        memory: 2000Mi
