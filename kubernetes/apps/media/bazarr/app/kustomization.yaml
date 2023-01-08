@@ -4,3 +4,5 @@ kind: Kustomization
 namespace: media
 resources:
   - ./helmrelease.yaml
+patchesStrategicMerge:
+  - ./patches/subcleaner.yaml
