@@ -63,14 +63,10 @@ spec:
       fsGroupChangePolicy: "OnRootMismatch"
       supplementalGroups:
         - 100
-    volumeClaimTemplates:
-      - name: config
+    config:
+        enabled: true
+        existingClaim: bazarr-config-pvc
         mountPath: /config
-        accessMode: ReadWriteOnce
-        size: 1Gi
-        storageClass: longhorn
-        labels:
-          snapshot.home.arpa/enabled: "true"
     resources:
       requests:
         cpu: 10m
