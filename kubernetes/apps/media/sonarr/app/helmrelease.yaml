@@ -55,7 +55,7 @@ spec:
             sub_filter_once on;
           hajimari.io/icon: mdi:television-classic
         hosts:
-          - host: &host "{{ .Release.Name }}.devbu.io"
+          - host: &host "{{ .Release.Name }}.ekenhome.se"
             paths:
               - path: /
                 pathType: Prefix
