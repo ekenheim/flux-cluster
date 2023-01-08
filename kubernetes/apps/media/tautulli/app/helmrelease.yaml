@@ -67,7 +67,7 @@ spec:
       config:
         enabled: true
         existingClaim: tautulli-config-pvc
-        subPath: config
+        mountPath: /config
     resources:
       requests:
         cpu: 10m
