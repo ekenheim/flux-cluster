@@ -35,7 +35,6 @@ spec:
       tag: 4.0.0.333@sha256:0331a4fd79235ead53a6226278c49857a496f88db06bb39317f8e7c97836ab83
     env:
       TZ: Europe/Stockholm
-      PUSHOVER_DEBUG: "false"
       SONARR__INSTANCE_NAME: Sonarr
       SONARR__PORT: &port 80
       SONARR__LOG_LEVEL: info
