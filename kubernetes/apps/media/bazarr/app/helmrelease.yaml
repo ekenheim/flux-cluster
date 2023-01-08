@@ -64,7 +64,7 @@ spec:
       supplementalGroups:
         - 100
     volumeClaimTemplates:
-      - name: bazarr-config-pvc
+      - name: config
         mountPath: /config
         accessMode: ReadWriteOnce
         size: 1Gi
