@@ -10,7 +10,7 @@ metadata:
 spec:
   dependsOn:
     - name: cluster-apps-longhorn
-  path: ./kubernetes/apps/media/sonarr/app
+  path: ./kubernetes/apps/media/sonarr4k/app
   prune: true
   sourceRef:
     kind: GitRepository
