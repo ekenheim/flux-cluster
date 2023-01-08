@@ -1,4 +1,5 @@
 ---
+# yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/helmrelease_v2beta1.json
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -35,6 +36,8 @@ spec:
       tag: 4.3.2.6857@sha256:3505169067b62bdeb722aea4dd55446592307a24eec7298bd88001e0b7510007
     env:
       TZ: Europe/Stockholm
+      PUSHOVER_DEBUG: "false"
+      PUSHOVER_APP_URL: &host "{{ .Release.Name }}.ekenhome.se"
       RADARR__INSTANCE_NAME: Radarr
       RADARR__PORT: &port 80
       RADARR__APPLICATION_URL: "https://{{ .Release.Name }}.ekenhome.se"
