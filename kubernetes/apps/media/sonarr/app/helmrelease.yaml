@@ -84,6 +84,11 @@ spec:
         server: 192.168.50.50
         path: /mnt/user/Media/series
         mountPath: /media
+      config:
+        enabled: true
+        type: pvc
+        accessMode: ReadWriteOnce
+        mountPath: /config
     resources:
       requests:
         cpu: 10m
