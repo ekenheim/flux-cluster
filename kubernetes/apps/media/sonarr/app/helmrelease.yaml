@@ -87,7 +87,6 @@ spec:
       config:
         enabled: true
         type: pvc
-        accessMode: ReadWriteOnce
         mountPath: /config
     resources:
       requests:
