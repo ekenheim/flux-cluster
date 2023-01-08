@@ -86,6 +86,12 @@ spec:
         server: 192.168.50.50
         path: /mnt/user/Media/cartoons
         mountPath: /cartoons
+      downloads:
+        enabled: true
+        type: nfs
+        server: 192.168.50.50
+        path: /mnt/user/Downloads/
+        mountPath: /Downloads
     resources:
       requests:
         cpu: 10m
