@@ -85,7 +85,7 @@ spec:
         type: nfs
         server: 192.168.50.50
         path: /mnt/user/Media/cartoons
-        mountPath: /media
+        mountPath: /cartoons
     resources:
       requests:
         cpu: 10m
