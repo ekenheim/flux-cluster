@@ -74,6 +74,7 @@ spec:
         enabled: true
         existingClaim: sonarr-config-pvc
         mountPath: /config
+        subPath: /config
       media:
         enabled: true
         type: nfs
