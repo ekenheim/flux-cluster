@@ -69,15 +69,15 @@ spec:
       fsGroupChangePolicy: "OnRootMismatch"
       supplementalGroups:
         - 100
-    volumeClaimTemplates:
-      - name: config
-        mountPath: /config
-        accessMode: ReadWriteOnce
-        size: 10Gi
-        storageClass: longhorn
-        labels:
-          snapshot.home.arpa/enabled: "true"
     persistence:
+      enabled: true
+      config:
+        enabled: true
+        type: pvc
+        storageClass: longhorn
+        mountPath: /config
+        accessMode: ReadWriteMany
+        existingClaim: config-sonarr
       media:
         enabled: true
         type: nfs
