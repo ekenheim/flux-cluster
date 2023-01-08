@@ -67,6 +67,8 @@ spec:
       config:
         enabled: true
         existingClaim: tautulli-config-v1
+        storageClass: longhorn
+        mountPath: /config
     resources:
       requests:
         cpu: 10m
