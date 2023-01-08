@@ -30,7 +30,7 @@ spec:
       createDefaultDiskLabeledNodes: true
       storageMinimalAvailablePercentage: "10"
       defaultLonghornStaticStorageClass: "longhorn"
-      backupTarget: "s3://{{ minio_longhorn_bucket }}@{{ minio_site_region }}/"
+      backupTarget: "s3://k3s-longhorn@eu-west-1/"
       backupTargetCredentialSecret: minio-secret
       defaultDataPath: "/storage"
     ingress:
