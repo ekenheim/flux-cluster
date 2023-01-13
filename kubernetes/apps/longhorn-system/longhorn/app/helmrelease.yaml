@@ -32,6 +32,7 @@ spec:
       defaultLonghornStaticStorageClass: "longhorn"
       backupTarget: "s3://k3s-longhorn@eu-west-1/"
       backupTargetCredentialSecret: minio-secret
+      defaultDataPath: "/home"
     ingress:
       enabled: true
       ingressClassName: "nginx"
