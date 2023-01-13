@@ -10,6 +10,9 @@ metadata:
 spec:
   dependsOn:
     - name: cluster-apps-longhorn
+    - name: cluster-apps-metallb
+    - name: cluster-apps-metallb-config
+    - name: cluster-apps-ingress-nginx
   path: ./kubernetes/apps/media/sonarr4k/app
   prune: true
   sourceRef:
