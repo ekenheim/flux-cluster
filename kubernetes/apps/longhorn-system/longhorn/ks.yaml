@@ -12,7 +12,6 @@ spec:
     - name: cluster-apps-metallb
     - name: cluster-apps-metallb-config
     - name: cluster-apps-ingress-nginx
-    - name: cluster-apps-cluster
   path: ./kubernetes/apps/longhorn-system/longhorn/app
   prune: true
   sourceRef:
