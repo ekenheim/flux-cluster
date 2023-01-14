@@ -8,7 +8,7 @@ metadata:
   labels:
     substitution.flux.home.arpa/enabled: "true"
 spec:
-  path: ./kubernetes/apps/default/home-assistant/app
+  path: ./kubernetes/apps/home-automation/home-assistant/app
   prune: true
   sourceRef:
     kind: GitRepository
