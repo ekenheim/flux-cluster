@@ -29,6 +29,9 @@ spec:
     initContainers:
       init-db:
         image: ghcr.io/onedr0p/postgres-initdb:14.6
+        envFrom:
+          - secretRef:
+              name: home-assistant-secret
     controller:
       type: statefulset
       annotations:
@@ -38,7 +41,7 @@ spec:
       tag: 2023.1.4@sha256:9cb4594d902a7eddec6539819cfff0514f941910a4d0243130342419dcaee3cd
     env:
       TZ: "Europe/Stockholm"
-      POSTGRES_HOST: postgres-rw.default.svc.cluster.local
+      POSTGRES_HOST: postgres-rw.home-automation.svc.cluster.local
       POSTGRES_DB: home_assistant
     envFrom:
       - secretRef:
