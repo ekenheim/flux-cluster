@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: &app lidarr
+  name: lidarr
   namespace: media
 spec:
   interval: 15m
@@ -54,7 +54,7 @@ spec:
             sub_filter_once on;
           hajimari.io/icon: mdi:television-classic
         hosts:
-          - host: *host
+          - host: &host "{{ .Release.Name }}.ekenhome.se"
             paths:
               - path: /
                 pathType: Prefix
