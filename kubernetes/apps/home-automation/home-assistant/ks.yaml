@@ -12,7 +12,7 @@ spec:
     - name: cluster-apps-metallb
     - name: cluster-apps-metallb-config
     - name: cluster-apps-ingress-nginx
-  path: ./kubernetes/apps/home-automatiom/home-assistant/app
+  path: ./kubernetes/apps/home-automation/home-assistant/app
   prune: true
   sourceRef:
     kind: GitRepository
