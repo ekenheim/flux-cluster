@@ -57,6 +57,7 @@ spec:
         tls:
           - hosts:
               - *host
+            secretName: overseerr-server-tls
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1000
