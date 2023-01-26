@@ -81,7 +81,9 @@ spec:
       intel.feature.node.kubernetes.io/pci-0300_8086.present: "true"
     resources:
       requests:
+        gpu.intel.com/i915: 1
         cpu: 100m
         memory: 1000Mi
       limits:
+        gpu.intel.com/i915: 1
         memory: 6000Mi
