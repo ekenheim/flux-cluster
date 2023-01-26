@@ -78,7 +78,7 @@ spec:
         mountPath: /media
     nodeSelector:
       node-role.kubernetes.io/worker: "true"
-      intel.feature.node.kubernetes.io/gpu: "true"
+      intel.feature.node.kubernetes.io/pci-0300_8086: "true"
     resources:
       requests:
         gpu.intel.com/i915: 1
