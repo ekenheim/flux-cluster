@@ -76,7 +76,7 @@ spec:
         path: /mnt/user/Media/
         mountPath: /media
     nodeSelector:
-      intel.feature.node.kubernetes.io/custom-intel-gpu: "true"
+      feature.node.kubernetes.io/custom-intel-gpu: "true"
     resources:
       requests:
         cpu: 100m
