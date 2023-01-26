@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
   # - ./git
   - ./helm
+  - ./node-feature-discovery.yaml
   # - ./oci
