@@ -16,4 +16,4 @@ resources:
   - ./sonarr4k/ks.yaml
   - ./tautulli/ks.yaml
   - ./overseerr/ks.yaml
-  - ./jellyfin/ks.yaml
+  - ./plex/ks.yaml
