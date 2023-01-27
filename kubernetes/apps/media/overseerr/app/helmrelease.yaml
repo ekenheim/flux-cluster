@@ -57,7 +57,7 @@ spec:
         tls:
           - hosts:
               - *host
-            secretName: overseerr-server-tls
+            secretName: plex-server-tls
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1000
