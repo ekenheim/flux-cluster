@@ -18,3 +18,4 @@ resources:
   - ./node-feature-discovery.yaml
   - ./intel.yaml
   - ./kyverno.yaml
+  - ./external-secrets.yaml
