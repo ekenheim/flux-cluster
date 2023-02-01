@@ -17,3 +17,4 @@ resources:
   - ./tautulli/ks.yaml
   - ./overseerr/ks.yaml
   - ./plex/ks.yaml
+  - ./readarr/ks.yaml
