@@ -37,4 +37,4 @@ spec:
           initialDelaySeconds: 15
         volumeMounts:
           - name: shared
-            mountPath: /home/opuser/.op/data
+            mountPath: /home/ubuntu/.op/data
