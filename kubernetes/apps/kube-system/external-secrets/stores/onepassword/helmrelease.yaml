@@ -89,7 +89,7 @@ spec:
       shared:
         enabled: true
         type: emptyDir
-        mountPath: /home/opuser/.op/data
+        mountPath: /home/ubuntu/.op/data
     resources:
       requests:
         cpu: 5m
