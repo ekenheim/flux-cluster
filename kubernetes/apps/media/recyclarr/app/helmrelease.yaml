@@ -35,7 +35,7 @@ spec:
     restartPolicy: OnFailure
     image:
       repository: ghcr.io/recyclarr/recyclarr
-      tag: rolling
+      tag: edge
     command: ["/app/recyclarr/recyclarr"]
     args: ["sync"]
     service:
