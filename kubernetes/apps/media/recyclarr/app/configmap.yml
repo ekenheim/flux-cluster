@@ -52,9 +52,8 @@ data:
             - 570bc9ebecd92723d2d21500f4be314c # Remaster +25
             - e0c07d59beb37348e975a930d5e50319 # Criterion Collection +25
 
-            - 4d74ac4c4db0b64bff6ce0cffef99bf0 # UHD Bluray Tier 01 +2300
-            - a58f517a70193f8e578056642178419d # UHD Bluray Tier 02 +2200
-            - e71939fae578037e7aed3ee219bbe7c1 # UHD Bluray Tier 03 +2100
+            - 3a3ff47579026e76d6504ebea39390de # Remux Tier 01
+            - 9f98181fe5a3fbeb0cc29340da2a468a # Remux Tier 02
             - c20f169ef63c5f40c2def54abaf4438e # WEB Tier 01        +1700
             - 403816d65392c79236dcb6dd591aeda4 # WEB Tier 02        +1650
             - af94e0fe497124d1f9ce732069ec8c3b # WEB Tier 03        +1600
