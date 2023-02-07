@@ -1,0 +1,33 @@
+# radarr-cronjob.yaml
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: recyclarr-radarr
+  namespace: media
+  labels:
+    app.kubernetes.io/name: recyclarr
+    app.kubernetes.io/instance: recyclarr-radarr
+spec:
+  schedule: "0 */3 * * *" # every 8 hours
+  concurrencyPolicy: Replace
+  successfulJobsHistoryLimit: 21 # 1 week
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          volumes:
+            - name: recyclarr-config
+              configMap:
+                name: recyclarr-config
+          containers:
+            - name: recyclarr
+              image: ghcr.io/recyclarr/recyclarr:latest
+              command: ["recyclarr"]
+              args: ["radarr"]
+              volumeMounts:
+                - mountPath: "/config/recyclarr.yml"
+                  name: recyclarr-config
+                  subPath: recyclarr.yml
