@@ -3,7 +3,6 @@ radarr:
   standard:
     base_url: http://radarr4k.media.svc.cluster.local
     api_key: 72c56aa5db48426baa1eb88676cb8e80
-
     delete_old_custom_formats: true
     custom_formats:
       # Advanced Audio from the guide
