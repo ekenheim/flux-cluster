@@ -51,11 +51,6 @@ sonarr:
           - 82d40da2bc6923f41e14394075dd4b03 # No-RlsGroup
           - e1a997ddb54e3ecbfe06341ad323c458 # Obfuscated
           - 06d66ab109d4d2eddb2794d21526d140 # Retags
-        quality_profiles:
-          - name: Any
-            reset_unmatched_scores: true
-          - name: HD
-            reset_unmatched_scores: true
       - trash_ids:
           - 3bc5f395426614e155e585a2f056cdf1 # Season Pack
         quality_profiles:
