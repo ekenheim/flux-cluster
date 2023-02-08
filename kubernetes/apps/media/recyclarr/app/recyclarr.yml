@@ -60,9 +60,11 @@ sonarr:
           - 3bc5f395426614e155e585a2f056cdf1 # Season Pack
         quality_profiles:
           - name: Any
-            score: 10
+            reset_unmatched_scores: true
           - name: HD
-            score: 10
+            reset_unmatched_scores: true
+          - name: SD
+            reset_unmatched_scores: true
 standard2:
   base_url: http://sonarr.media.svc.cluster.local
   api_key: ca4aee5a371549829d56a306c0c79b48
