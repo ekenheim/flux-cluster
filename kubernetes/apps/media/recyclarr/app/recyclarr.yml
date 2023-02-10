@@ -63,7 +63,6 @@ sonarr:
   standard2:
     base_url: http://sonarr.media.svc.cluster.local
     api_key: ca4aee5a371549829d56a306c0c79b48
-    quality_definition: anime
     custom_formats:
       - trash_ids:
           # Anime CF's
