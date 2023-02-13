@@ -19,3 +19,4 @@ resources:
   - ./intel.yaml
   - ./kyverno.yaml
   - ./external-secrets.yaml
+  - ./cloudnative-pg.yaml
