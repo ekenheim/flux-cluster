@@ -5,7 +5,7 @@ metadata:
   name: postgres-lb
   namespace: databases
   annotations:
-    coredns.io/hostname: postgres.devbu.io
+    coredns.io/hostname: postgres.ekenhome.se
 spec:
   type: LoadBalancer
   externalTrafficPolicy: Local
