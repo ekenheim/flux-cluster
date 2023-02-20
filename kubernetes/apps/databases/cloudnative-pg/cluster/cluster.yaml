@@ -15,7 +15,7 @@ spec:
     size: 20Gi
     storageClass: longhorn
   superuserSecret:
-    name: cloudnative-pg-secret
+    name: postgres-superuser
   bootstrap:
     recovery:
       source: &previous-cluster postgres-v2
@@ -36,10 +36,10 @@ spec:
       serverName: postgres-v3
       s3Credentials:
         accessKeyId:
-          name: cloudnative-pg-secret
+          name: postgres-superuser
           key: aws-access-key-id
         secretAccessKey:
-          name: cloudnative-pg-secret
+          name: postgres-superuser
           key: aws-secret-access-key
   # Note: externalClusters is needed when recovering from an existing cnpg cluster
   externalClusters:
@@ -52,8 +52,8 @@ spec:
         endpointURL: http://s3.turbo.ac
         s3Credentials:
           accessKeyId:
-            name: cloudnative-pg-secret
+            name: postgres-superuser
             key: aws-access-key-id
           secretAccessKey:
-            name: cloudnative-pg-secret
+            name: postgres-superuser
             key: aws-secret-access-key
