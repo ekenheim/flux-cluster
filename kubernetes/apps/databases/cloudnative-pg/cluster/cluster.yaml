@@ -42,18 +42,18 @@ spec:
           name: postgres-superuser
           key: MINIO_SECRET_KEY
   # Note: externalClusters is needed when recovering from an existing cnpg cluster
-  externalClusters:
-    - name: *previous-cluster
-      barmanObjectStore:
-        wal:
-          compression: bzip2
-          maxParallel: 8
-        destinationPath: s3://postgres-db/
-        endpointURL: http://192.168.1.16:9768
-        s3Credentials:
-          accessKeyId:
-            name: postgres-superuser
-            key: MINIO_ACCESS_KEY
-          secretAccessKey:
-            name: postgres-superuser
-            key: MINIO_SECRET_KEY
+  #externalClusters:
+  #  - name: *previous-cluster
+  #    barmanObjectStore:
+  #      wal:
+  #        compression: bzip2
+  #        maxParallel: 8
+  #      destinationPath: s3://postgres-db/
+  #      endpointURL: http://192.168.1.16:9768
+  #      s3Credentials:
+  #        accessKeyId:
+  #          name: postgres-superuser
+  #          key: MINIO_ACCESS_KEY
+  #        secretAccessKey:
+  #          name: postgres-superuser
+  #          key: MINIO_SECRET_KEY
