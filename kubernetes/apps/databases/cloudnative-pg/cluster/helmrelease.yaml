@@ -52,7 +52,6 @@ spec:
                 maxParallel: 8
               destinationPath: s3://postgres-db/
               endpointURL: http://192.168.1.16:9768
-              serverName: postgres-v1
               s3Credentials:
                 accessKeyId:
                   name: postgres-superuser
