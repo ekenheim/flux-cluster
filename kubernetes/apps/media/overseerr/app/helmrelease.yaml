@@ -30,7 +30,7 @@ spec:
       type: statefulset
     image:
       repository: ghcr.io/sct/overseerr
-      tag: develop
+      tag: a4d07f5afab613317d96c9c6e9b47157a5a28986
     env:
       TZ: Europe/Stockholm
       LOG_LEVEL: "info"
