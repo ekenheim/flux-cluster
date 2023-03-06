@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: sonarr-config-pvc
+  name: sonarr4k-config-pvc
   namespace: media
   labels:
     k8s-app: sonarr4k
