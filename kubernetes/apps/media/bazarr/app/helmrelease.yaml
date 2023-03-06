@@ -30,7 +30,7 @@ spec:
       type: statefulset
     image:
       repository: ghcr.io/onedr0p/bazarr
-      tag: rolling
+      tag: 1.2.0
     env:
       TZ: Europe/Stockholm
     service:

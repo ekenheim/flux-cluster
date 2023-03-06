@@ -32,7 +32,7 @@ spec:
         reloader.stakater.com/auto: "true"
     image:
       repository: ghcr.io/onedr0p/lidarr-develop
-      tag: rolling
+      tag: 1.1.3.2982
     env:
       TZ: Europe/Stockholm
       LIDARR__INSTANCE_NAME: Lidarr

@@ -32,7 +32,7 @@ spec:
         reloader.stakater.com/auto: "true"
     image:
       repository: ghcr.io/onedr0p/readarr-develop
-      tag: rolling
+      tag: 0.1.4.1596
     env:
       TZ: Europe/Stockholm
       READARR__INSTANCE_NAME: readarr

@@ -31,7 +31,7 @@ spec:
       type: statefulset
     image:
       repository: ghcr.io/onedr0p/tautulli
-      tag: rolling
+      tag: 2.11.1
     env:
       TZ: Europe/Stockholm
     service:
