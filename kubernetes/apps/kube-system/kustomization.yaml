@@ -8,5 +8,6 @@ resources:
   - ./reloader/ks.yaml
   - ./intel-device-plugin/ks.yaml
   - ./node-feature-discovery/ks.yaml
+  - ./descheduler/ks.yaml
   #- ./local-path-provisioner/ks.yaml
   #- ./external-secrets/ks.yaml

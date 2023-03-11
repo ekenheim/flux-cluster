@@ -3,12 +3,12 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: cluster-apps-minio-app
+  name: cluster-apps-unpoller
   namespace: flux-system
   labels:
     substitution.flux.home.arpa/enabled: "true"
 spec:
-  path: ./kubernetes/apps/default/minio/app
+  path: ./kubernetes/apps/monitoring/unpoller/app
   prune: true
   sourceRef:
     kind: GitRepository
@@ -16,8 +16,8 @@ spec:
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v2beta1
       kind: HelmRelease
-      name: minio
-      namespace: databases
+      name: unpoller
+      namespace: monitoring
   interval: 30m
   retryInterval: 1m
   timeout: 3m
