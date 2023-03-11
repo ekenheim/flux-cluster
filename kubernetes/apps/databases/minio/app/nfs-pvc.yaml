@@ -11,7 +11,7 @@ spec:
   storageClassName: minio-nfs
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: "192.168.50.16"
+    server: "192.168.50.50"
     path: /mnt/apps-backup/
   mountOptions:
     - nfsvers=4.2
