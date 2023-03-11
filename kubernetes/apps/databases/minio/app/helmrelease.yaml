@@ -61,7 +61,7 @@ spec:
             scheme: http
             path: /minio/v2/metrics/cluster
             interval: 1m
-            scrapeTimeout: 10s
+            scrapeTimeout: 11s
             bearerTokenSecret:
               name: minio-secret
               key: MINIO_PROMETHEUS_TOKEN
