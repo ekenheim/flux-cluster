@@ -12,7 +12,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.50.50
-    path: /mnt/apps-backup/minio
+    path: /mnt/user/minio/
   mountOptions:
     - nfsvers=4.2
     - nconnect=8
