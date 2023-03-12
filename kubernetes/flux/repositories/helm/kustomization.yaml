@@ -21,3 +21,4 @@ resources:
   - ./external-secrets.yaml
   - ./cloudnative-pg.yaml
   - ./prometheus-community.yaml
+  - ./emqx.yaml
