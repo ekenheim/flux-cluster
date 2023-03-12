@@ -12,7 +12,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.50.50
-    path: /mnt/user/minio-k8s/
+    path: /mnt/disks/50026B7683C09B74/minio-k8s/
   mountOptions:
     - nfsvers=4.2
     - nconnect=8
