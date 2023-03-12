@@ -20,3 +20,4 @@ resources:
   - ./kyverno.yaml
   - ./external-secrets.yaml
   - ./cloudnative-pg.yaml
+  - ./prometheus-community.yaml
