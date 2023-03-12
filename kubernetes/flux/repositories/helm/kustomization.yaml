@@ -22,3 +22,4 @@ resources:
   - ./cloudnative-pg.yaml
   - ./prometheus-community.yaml
   - ./emqx.yaml
+  - ./descheduler.yaml
