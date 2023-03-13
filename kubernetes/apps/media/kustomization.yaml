@@ -8,7 +8,7 @@ resources:
   # Flux-Kustomizations
   - ./bazarr/ks.yaml
   - ./bazarr4k/ks.yaml
-  - ./lidarr/ks.yaml
+  #- ./lidarr/ks.yaml
   - ./prowlarr/ks.yaml
   - ./radarr/ks.yaml
   - ./radarr4k/ks.yaml
